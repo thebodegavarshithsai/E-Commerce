@@ -1,0 +1,80 @@
+.popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-height: 90vh; /* Changed from height to min-height for better flexibility */
+}
+
+.popular h1 {
+  color: #171717;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.popular hr {
+  width: 200px;
+  height: 10px;
+  border-radius: 10px;
+  background: #252525;
+}
+
+.popular-item {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; /* Allows items to wrap if they don't fit */
+  justify-content: center; /* Center the items */
+}
+
+@media (max-width: 1024px) {
+  .popular h1 {
+    font-size: 40px; /* Smaller font size for smaller screens */
+  }
+
+  .popular hr {
+    width: 150px; /* Adjusted width */
+    height: 8px; /* Adjusted height */
+  }
+
+  .popular-item {
+    gap: 20px; /* Reduced gap between items */
+  }
+}
+
+@media (max-width: 768px) {
+  .popular h1 {
+    font-size: 35px; /* Smaller font size for tablets */
+  }
+
+  .popular hr {
+    width: 100px; /* Adjusted width */
+    height: 6px; /* Adjusted height */
+  }
+
+  .popular-item {
+    gap: 15px; /* Further reduced gap between items */
+  }
+}
+
+@media (max-width: 480px) {
+  .popular {
+    margin-bottom: 50px; /* Reduced margin for small screens */
+  }
+
+  .popular h1 {
+    font-size: 30px; /* Smaller font size for mobile */
+  }
+
+  .popular hr {
+    width: 80px; /* Adjusted width */
+    height: 4px; /* Adjusted height */
+  }
+
+  .popular-item {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center;
+    gap: 10px; /* Reduced gap for vertical layout */
+  }
+}
